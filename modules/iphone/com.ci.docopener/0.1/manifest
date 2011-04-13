@@ -1,0 +1,17 @@
+#
+# this is your module manifest and used by Titanium
+# during compilation, packaging, distribution, etc.
+#
+version: 0.1
+description: My module
+author: Your Name
+license: Specify your license
+copyright: Copyright (c) 2010 by Your Company
+
+
+# these should not be edited
+name: cidocopener
+moduleid: com.ci.docopener
+guid: 600f70a0-9e70-4bd4-8026-782cb0bedacc
+platform: iphone
+minsdk: 1.6.1
