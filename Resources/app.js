@@ -61,6 +61,24 @@ button = Ti.UI.createButton({
     title:"button"
 });
 
+var http = Titanium.Network.createHTTPClient();
+http.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
+var url = "http://greenlyyt.iriscouch.com/greenlyyt/" + Ti.Platform.createUUID()+"/";
+http.open("PUT", url);
+Ti.API.debug(url);
+
+http.onload = function() {
+    Ti.API.debug(http.responseText);
+}
+http.onerror = function(e) {
+    Ti.API.debug(e);
+}
+http.send(JSON.stringify({
+    title:"test",
+    body:"test document body " + new Date()
+}));
+Ti.API.debug(http.url);
+
 var o;
 button.addEventListener("click", function(e) {
     o = ciDocOpener.useDocumentOpener({
